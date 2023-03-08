@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+        <meta http-equiv="X-UA-Compatible" content = "ie=edge">
+        <title> Bestellung </title>
+         <style>
+            fieldset
+            {
+                background-color: yellow;
+                color: #000000;
+                border: 2px #bdbdbd solid;
+                display: block;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <form action="Bestellung.php">
+            <fieldset>
+                <legend>Wähle Sie die Größe Ihrer Pizza</legend>
+                <label><input type="radio" checked name="größewahl" value="mini"/>Mini (18cm) Grundpreis: 3€</label><br/>
+                <label><input type="radio" name="größewahl" value="standard"/>Standard (24cm) Grundpreis: 5€</label><br/>
+                <label><input type="radio" name="größewahl" value="family"/>Family (32cm) Grundpreis: 7€</label>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Wähle Sie hier Beläge</legend>
+                <p><i>Jede Pizza ist mit Käse und Tomaten belegt. Alles weitere kostet je 1€</i></p>
+                <label><input type="checkbox" name="bewahl[]" value="salami"/>Salami</label>
+                <label><input type="checkbox" name="bewahl[]" value="pilze"/>Pilze</label><br/>
+                <label><input type="checkbox" name="bewahl[]" value="extra käse"/>Extra Käse</label>
+                <label><input type="checkbox" name="bewahl[]" value="extra tomaten"/>Extra Tomaten</label>
+            </fieldset>
+            <fieldset>
+                <legend>Lieferdaten</legend>
+                <label>
+                    Name:<br/> 
+                    <input type="text" name="name" />
+                </label><br/>
+                <label>
+                    Ihre Anschrift:<br/>
+                    <input type="text" name="name" />
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend>Anzahl Pizzen</legend>
+                <label for="idZahl">Wie viele sollen es sein?</label><br/>
+                    <input id="idZahl" type="number" name="zahl" min="0" max="99"/>
+            </fieldset>
+            <fieldset>
+                <legend>Eingaben</legend>
+                <label>Die Bestellung:  <input type="submit" value="Abschicken" /><input type="submit" value="Verwerfen" /></label>
+            </fieldset>
+        </form>
+    </body>
+</html>

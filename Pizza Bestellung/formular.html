@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+        <meta http-equiv="X-UA-Compatible" content = "ie=edge">
+        <title>Übersicht Formular</title>
+        <style>
+            label
+            {
+                background-color: #ccffcc;
+                color: #000000;
+                border: 2px #bdbdbd solid;
+                display: block;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <form action="formular.php">
+            <fieldset>
+                <legend>Einzeilige Textfelder</legend>
+                <label>
+                    Name: <input type="text" name="name" />
+                </label>
+                <label for="idZahl">Zahl:</label>
+                <input id="idZahl" type="number" name="zahl" min="0" max="10" step="0.01" />
+                <label for="IdDatum">Datum</label>
+                <input id="IdDatum" type="date" name="datum" />
+            </fieldset>
+            <fieldset>
+                <legend>Auswahl - Alternativ</legend>
+                <label><input type="radio" name="rdwahl" value="rd1"/>Auswahl 1</label>
+                <label><input type="radio" name="rdwahl" value="rd2"/>Auswahl 2</label>
+                <label><input type="radio" name="rdwahl" value="rd3"/>Auswahl 3</label>
+            </fieldset>
+            <fieldset>
+                <legend>Auswahl - viele werte</legend>
+                <label><input type="checkbox" name="chwahl[]" value="check1"/>Auswahl 1</label>
+                <label><input type="checkbox" name="chwahl[]" value="check2"/>Auswahl 2</label>
+                <label><input type="checkbox" name="chwahl[]" value="check3"/>Auswahl 3</label>
+            </fieldset>
+            <fieldset>
+                <legend>DropDown - combobox</legend>
+                <label for="idsel">Auswahl ein wert</label>
+                <select id="idsel" name="selwahl">
+                    <option value="sel1">Auswahl 1</option>
+                    <option value="sel2">Auswahl 2</option>
+                </select>
+                
+                <label for="idsel1">Auswahl viele werte</label>
+                <select id="idsel1" name="selmehr[]" multiple>
+                    <option value="sel1">Auswahl 1</option>
+                    <option value="sel2">Auswahl 2</option>
+                </select>
+            </fieldset>
+            <input type="submit" value="Datenübertragung" />
+        </form>
+    </body>
+</html>
